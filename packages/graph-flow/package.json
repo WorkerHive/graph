@@ -1,0 +1,24 @@
+{
+  "name": "@workerhive/flow",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Ross Leitch <professional.balbatross@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@workerhive/graph": "^0.0.0",
+    "@workerhive/queendb": "^2.1.33"
+  }
+}

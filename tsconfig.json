@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./packages",
+    "skipLibCheck": true,
+    "paths": {
+      "typescript": [
+        "../node_modules/typescript"
+      ],
+      "graphql": [
+        "../node_modules/graphql"
+      ],
+      "graphql-compose": [
+        "../node_modules/graphql-compose"
+      ],
+      "@workerhive/graph": [
+        "graph-server/src"
+      ]
+    }
+  }
+}
