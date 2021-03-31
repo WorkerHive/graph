@@ -5,6 +5,7 @@ import QueenDb from '@workerhive/queendb';
 let typeMap;
 
 
+/*
 export const transform = (schema : SchemaComposer<any>, db: QueenDb) : {types: any, resolvers: any} => {
 
             schemaComposer.merge(schema);
@@ -104,7 +105,7 @@ export const transform = (schema : SchemaComposer<any>, db: QueenDb) : {types: a
                     dbName: 'String',
                     user: 'String',
                     pass: 'String'
-                        */
+                        
 
                         let serverResult = await (context.connector as FlowCRUD).db.linkServer(integrationStore.name, {
                             host: integrationStore.host,
@@ -251,3 +252,4 @@ export const transform = (schema : SchemaComposer<any>, db: QueenDb) : {types: a
             let resolvers = schemaComposer.getResolveMethods();
             return { types: sdl, resolvers: resolvers}
         }
+*/

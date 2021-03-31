@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "test:graph": "cd packages/graph-server && npm run tests",
-    "build:graph": "lerna run build --scope @workerhive/graph"
+    "build:graph": "lerna run build --scope @workerhive/graph",
+    "build": "lerna run build",
+    "publish": "npm run build && lerna publish"
   },
   "devDependencies": {
     "@types/graphql-upload": "^8.0.4",

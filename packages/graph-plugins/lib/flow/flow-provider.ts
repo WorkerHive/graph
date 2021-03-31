@@ -3,7 +3,8 @@ import { ObjectTypeComposer, SchemaComposer, schemaComposer } from 'graphql-comp
 
 import { BaseConnector, BaseGraph } from '@workerhive/graph';
 //Replace below
-import { transform as setupConfig } from './integrationTransform'
+//import { transform as setupConfig } from './integrationTransform'
+
 import {merge} from 'lodash';
 import resolvers from './resolver-base'
 
@@ -63,7 +64,7 @@ export class FlowCRUD extends BaseConnector{
 
     getConfig(){
         //Get typedefs and resolvers for integration
-        return setupConfig(this.schemaFactory, this.db)
+       // return setupConfig(this.schemaFactory, this.db)
     }
 
     setParent(parent : any){
