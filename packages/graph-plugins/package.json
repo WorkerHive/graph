@@ -18,7 +18,7 @@
     "url": "git+https://github.com/WorkerHive/graph.git"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -b",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
@@ -28,5 +28,6 @@
     "@workerhive/graph": "^2.2.2",
     "@workerhive/ipfs": "^2.2.2",
     "@workerhive/queendb": "^2.1.33"
-  }
+  },
+  "gitHead": "90e2bf13603cedd097d481cdf164c7fb01a5630a"
 }

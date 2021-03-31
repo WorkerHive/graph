@@ -16,8 +16,8 @@
     // "sourceMap": true,                           /* Generates corresponding '.map' file. */
     // "outFile": "./",                             /* Concatenate and emit output to single file. */
     "outDir": "./dist",                              /* Redirect output structure to the directory. */
-    // "rootDir": "./",                             /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
-    // "composite": true,                           /* Enable project compilation */
+    "rootDir": "./lib",                             /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    "composite": true,                           /* Enable project compilation */
     // "tsBuildInfoFile": "./",                     /* Specify file to store incremental compilation information */
     // "removeComments": true,                      /* Do not emit comments to output. */
     // "noEmit": true,                              /* Do not emit outputs. */
@@ -69,6 +69,14 @@
     "skipLibCheck": true,                           /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true        /* Disallow inconsistently-cased references to the same file. */
   },
+  "references": [
+    {
+      "path": "../graph-server/tsconfig.json"
+    },
+    {
+      "path": "../graph-ipfs/tsconfig.json"
+    }
+  ],
   "include": ["lib"],
   "exclude": ["node_modules", "dist", "__tests__"]
 }

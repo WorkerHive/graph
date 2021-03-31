@@ -6,7 +6,9 @@
     "strict": true,                           /* Enable all strict type-checking options. */
    "esModuleInterop": true,                  /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
     "allowJs": true,
-    "outDir": "dist",
+    "composite": true,
+    "rootDir": "lib/",
+    "outDir": "dist/",
     "declaration": true,
     "noImplicitAny": false,
     "skipLibCheck": true,                     /* Skip type checking of declaration files. */
