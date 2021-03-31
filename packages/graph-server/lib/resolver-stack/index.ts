@@ -2,6 +2,7 @@ import EventEmitter from "events";
 import { schemaComposer, SchemaComposer } from "graphql-compose";
 import { BaseConnector, BaseGraph } from "..";
 
+/*
 export class CRUDResolverStack extends EventEmitter implements BaseConnector{
     protected parent?: BaseGraph | undefined;
     protected schemaFactory: SchemaComposer<any>;
@@ -15,6 +16,7 @@ export class CRUDResolverStack extends EventEmitter implements BaseConnector{
     setParent(parent: BaseGraph): void {
         throw new Error("Method not implemented.");
     }
+    
     create(type: string, newObject: any): Promise<object> {
         throw new Error("Method not implemented.");
     }
@@ -32,4 +34,4 @@ export class CRUDResolverStack extends EventEmitter implements BaseConnector{
     }
 
 
-}
+}*/

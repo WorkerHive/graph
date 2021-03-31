@@ -6,15 +6,11 @@ import { directives as generatedDirectives } from './generate'
 
 export const directives = [ 
     inputDirective,
-    uploadDirective,
-    crudDirective,
     configurableDirective,
     ...generatedDirectives
 ]
 
 export const directiveTransforms = [ 
     inputTransform,
-    uploadTransform,
-    crudTransform,
     configurableTransform
 ]

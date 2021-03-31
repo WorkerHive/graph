@@ -7,13 +7,15 @@ export function objectValues<T>(obj: { [name: string]: T }): T[] {
     return Object.keys(obj).map(i => obj[i]);
 }
 
-export function getTypesWithDirective(composer: SchemaComposer<any>, name: string): Array<Type> {
+export function getTypesWithDirective(composer: SchemaComposer<any>, name?: string): Array<Type> {
     let types: Array<Type> = [];
     composer.types.forEach((val, key) => {
         if (typeof (key) === 'string' && val instanceof ObjectTypeComposer) {
-            if (!name || name.length < 1) {
+            if(!name && val.getDirectives().length > 0){
                 types.push(new Type(composer.getOTC(key)))
-            } else if (val.getDirectives().map((x) => x.name).indexOf(name) > -1) {
+            }else if (name && name.length < 1) {
+                types.push(new Type(composer.getOTC(key)))
+            } else if (name && val.getDirectives().map((x) => x.name).indexOf(name) > -1) {
                 types.push(new Type(composer.getOTC(key)))
             }
         }

@@ -1,5 +1,5 @@
 {
-  "name": "@workerhive/graph",
+  "name": "@workerhive/ipfs",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "Ross Leitch <professional.balbatross@gmail.com>",
@@ -11,20 +11,18 @@
     "test": "__tests__"
   },
   "files": [
-    "dist"
+    "lib"
   ],
   "scripts": {
     "build": "tsc",
-    "tests": "jest --coverage"
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "async": "^3.2.0",
-    "camel-case": "^4.1.2",
-    "moniker": "^0.1.2",
+    "ipfs-core": "^0.5.4",
+    "uint8-to-base64": "^0.2.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@types/async": "^3.2.5",
-    "@types/uuid": "^8.3.0"
+    "wrtc": "^0.4.7"
   }
 }

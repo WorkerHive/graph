@@ -9,11 +9,20 @@
       "graphql": [
         "../node_modules/graphql"
       ],
+      "graphql-upload": [
+        "../node_modules/graphql-upload"
+      ],
       "graphql-compose": [
         "../node_modules/graphql-compose"
       ],
       "@workerhive/graph": [
-        "graph-server/src"
+        "graph-server/lib"
+      ],
+      "@workerhive/plugins": [
+        "graph-plugins/lib"
+      ],
+      "@workerhive/ipfs": [
+        "graph-ipfs/lib"
       ]
     }
   }

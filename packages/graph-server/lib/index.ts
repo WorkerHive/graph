@@ -10,7 +10,24 @@ import { merge } from "lodash";
 import { directives, directiveTransforms } from './directives';
 import { initialTypes } from "./initialTypes";
 
+import { applyGenerators, createGenerators, updateGenerators } from './generators'
+
+export interface HiveMiddleware{
+
+}
+
+export interface HiveGraphOptions{
+    types?: string;
+    resolvers?: any;
+    directives?: {
+        [key: string]: Array<HiveMiddleware>;
+    }
+}
+
 export {
+    applyGenerators,
+    createGenerators,
+    updateGenerators,
     GraphContext,
     BaseGraph,
     BaseConnector,
@@ -19,16 +36,12 @@ export {
 export default class HiveGraph extends BaseGraph{
 
     private initialTypes : string;
+    private resolvers : any;
+    private directives?: {
+        [key: string]: Array<HiveMiddleware>;
+    } = {};
 
     private context: GraphContext = {};
-/*    private hotReload: boolean;
-
-    private context : GraphContext;
-
-    private connector : GraphConnector;
-*/
-
-    private resolvers : any;
 
     public schema: GraphQLSchema;
 
@@ -36,18 +49,15 @@ export default class HiveGraph extends BaseGraph{
 
     public typeRegistry: TypeRegistry;
 
-    constructor(types: string = ``, resolvers: any = {}){
+    constructor(opts?: HiveGraphOptions){
         super();
-        this.initialTypes = initialTypes(types)
         
-        this.resolvers = resolvers
-        /*this.hotReload = hotReload
+        this.initialTypes = initialTypes(opts?.types || '')
+        this.resolvers = opts?.resolvers
+        this.directives = opts?.directives || {};
 
-        this.connector = connector;
-*/
+        this.typeRegistry = new TypeRegistry(this.initialTypes, opts?.resolvers);
 
-        this.typeRegistry = new TypeRegistry(this.initialTypes, resolvers);
-        //console.log(this.typeRegistry.sdl)
         this.schema = this.getSchema()
 
         this.schemaUpdate = this.schemaUpdate.bind(this);
@@ -75,6 +85,14 @@ export default class HiveGraph extends BaseGraph{
         directiveTransforms.forEach(transformAction => {
             outputSchema.merge(transformAction(outputSchema, this.typeRegistry))
         })
+
+        let {queries, composer} = this.typeRegistry.applyDirectives(outputSchema, this.directives)
+//        outputSchema.merge(composer)
+        
+        outputSchema.Query.addFields(queries.Query)
+        outputSchema.Mutation.addFields(queries.Mutation)
+
+        console.log(outputSchema.Query.toSDL())
 
          if(this.resolvers) outputSchema.addResolveMethods(this.resolvers)
 
