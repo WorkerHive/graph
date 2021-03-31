@@ -7,7 +7,19 @@ import { Type } from "@workerhive/graph/dist/registry/type"
 
 export const CRUD = (db: QueenDB) => {
 
+
     return (directiveName: string, composer: SchemaComposer<any>) => {
+        composer.addTypeDefs(`
+            input IntegrationMapInput{
+                nodes: JSON
+                links: JSON
+            }
+            type IntegrationMap @crud{
+                id: ID
+                nodes: JSON
+                links: JSON
+            }
+        `)
 
         let configurable: any = [];
         composer.types.forEach((val, key, map) => {
