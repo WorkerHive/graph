@@ -1,7 +1,6 @@
 import {GraphQLUpload} from 'graphql-upload';
 import { DirectiveLocation } from "graphql";
 import { camelCase, ObjectTypeComposer, SchemaComposer } from "graphql-compose";
-import { applyGenerators, createGenerators } from '@workerhive/graph'
 import { WorkhubFS } from '@workerhive/ipfs'
 import { create } from 'lodash';
 import { ReadStream } from 'fs';

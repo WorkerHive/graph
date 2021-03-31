@@ -11,7 +11,7 @@
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "scripts": {
     "build": "tsc -b",
@@ -25,5 +25,5 @@
   "devDependencies": {
     "wrtc": "^0.4.7"
   },
-  "gitHead": "90e2bf13603cedd097d481cdf164c7fb01a5630a"
+  "gitHead": "ff7d4d655411b3957400870310dc54b0f64d058c"
 }
