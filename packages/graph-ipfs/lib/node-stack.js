@@ -1,4 +1,5 @@
 const MDNS = require('libp2p-mdns')
+const { P2PStack } = require('./p2p-stack')
 const TCP = require('libp2p-tcp')
 const wrtc = require('wrtc')
 const WebRTCStar = require('libp2p-webrtc-star')

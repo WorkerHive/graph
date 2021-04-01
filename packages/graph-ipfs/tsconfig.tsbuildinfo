@@ -1209,8 +1209,8 @@
         "affectsGlobalScope": false
       },
       "./lib/node-stack.js": {
-        "version": "7c46102c35bc7fbe6154dc52f8caa0e595fad13a98f4c50b6c171938396b3079",
-        "signature": "7e278e7e1306bd6007c9d157a4821c0e15f69ee65eff5b1dc3b59c9a0c61c2e1",
+        "version": "af837b82806b5e628e08a528734b12a3e99aeb6d13c3f9284066e1874ffca04f",
+        "signature": "659f5b48853030133550c8736f20b35213b9950c9dc367779a3b5480a892cfb6",
         "affectsGlobalScope": true
       },
       "./lib/queue.ts": {
@@ -2852,6 +2852,9 @@
         "./lib/fs.js",
         "./node_modules/ipfs-core/dist/src/index.d.ts",
         "./node_modules/libp2p/dist/src/index.d.ts"
+      ],
+      "./lib/node-stack.js": [
+        "./lib/p2p-stack.js"
       ],
       "./lib/p2p-stack.js": [
         "./node_modules/libp2p-bootstrap/dist/src/index.d.ts",
@@ -4748,6 +4751,10 @@
       "./lib/index.ts": [
         "./node_modules/ipfs-core/dist/src/index.d.ts",
         "./node_modules/libp2p/dist/src/index.d.ts"
+      ],
+      "./lib/node-stack.js": [
+        "./node_modules/libp2p-noise/dist/src/index.d.ts",
+        "./node_modules/libp2p/dist/src/pnet/index.d.ts"
       ],
       "./lib/p2p-stack.js": [
         "./node_modules/libp2p-noise/dist/src/index.d.ts"
