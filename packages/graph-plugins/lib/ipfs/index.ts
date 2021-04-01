@@ -5,6 +5,10 @@ import { WorkhubFS } from '@workerhive/ipfs'
 import { create } from 'lodash';
 import { ReadStream } from 'fs';
 
+export const client = (models : any[], client: any, dispatch: any) => {
+    
+}
+
 export const IPFS : Function = (fs: WorkhubFS) => {
     return (directiveName: string) => {
 

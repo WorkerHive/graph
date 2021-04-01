@@ -11,8 +11,8 @@ declare global {
 const HubContext = React.createContext<[WorkhubClient | undefined, any, Boolean, Error | null]>([undefined, {}, false, null])
 
 
-export const WorkhubProvider = ({children, token, url} : ProviderProps) => {
-    const [ hub, store, isReady, err ] = useHubHook(url, token || '');
+export const WorkhubProvider = ({children, token, plugins, url} : ProviderProps) => {
+    const [ hub, store, isReady, err ] = useHubHook(url, plugins || {}, token || '');
     
     return (
         <HubContext.Provider value={[hub, store, isReady, err]} >
@@ -21,7 +21,7 @@ export const WorkhubProvider = ({children, token, url} : ProviderProps) => {
     )
 }
 
-export const useHubHook = (url : string, token: string) : [WorkhubClient | undefined, any, Boolean, Error | null] => {
+export const useHubHook = (url : string, plugins: {[key: string]: Array<HubPlugin>}, token: string) : [WorkhubClient | undefined, any, Boolean, Error | null] => {
     const [ hubUrl, setUrl ] = React.useState<string>('') 
     const [ client, setClient ] = React.useState<WorkhubClient>();
     const [ isReady, setReady ] = React.useState<boolean>(false);
@@ -50,7 +50,7 @@ export const useHubHook = (url : string, token: string) : [WorkhubClient | undef
                     
                     }*/
                 }else{
-                    let cli = new WorkhubClient(url);
+                    let cli = new WorkhubClient(url, {plugins});
                     cli.setAccessToken(token)
                     cli.setup(dispatch).then(() => {
                         window.hubClient = cli;
@@ -88,9 +88,14 @@ export const useHubHook = (url : string, token: string) : [WorkhubClient | undef
     return [client, store, isReady, error];
 }
 
+export type HubPlugin = (models: any, client: any, dispatch: any) => {[key: string]: Function};
+
 export interface ProviderProps {
     children: any;
     token?: string;
+    plugins?: {
+        [key: string]: Array<HubPlugin>;
+    }
     url: string;
 }
 

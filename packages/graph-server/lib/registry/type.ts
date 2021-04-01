@@ -49,7 +49,7 @@ export default class TypeRegistry extends EventEmitter {
             }))
 
             directiveTransforms[k] = flow(d.map((x: any) => x.transform))
-          
+
         }
 
         //Add directives
@@ -68,18 +68,18 @@ export default class TypeRegistry extends EventEmitter {
 
         types.forEach((type) => {
             let otc = origin_composer.getOTC(type.name);
-        
+
             let rootVal = {
                 Query: {},
                 Mutation: {}
             };
-            
+
             let dirs = otc.getDirectiveNames().filter((a) => directiveTransforms[a]);
 
             dirs.forEach((name) => {
                 let { composer, Query, Mutation } = directiveTransforms[name](origin_composer, otc)
-                if(composer && composer instanceof SchemaComposer) origin_composer.merge(composer)
-                
+                if (composer && composer instanceof SchemaComposer) origin_composer.merge(composer)
+
                 //TODO merge with flow
                 rootVal.Query = merge(rootVal.Query, Query)
                 rootVal.Mutation = merge(rootVal.Mutation, Mutation)
@@ -91,9 +91,9 @@ export default class TypeRegistry extends EventEmitter {
             newQueries = merge(newQueries, rootVal)
         })
 
-        return {composer: origin_composer, queries: newQueries}
+        return { composer: origin_composer, queries: newQueries }
         //return composer.buildSchema()
-      //  console.log(composer)
+        //  console.log(composer)
 
     }
 
@@ -129,14 +129,22 @@ export default class TypeRegistry extends EventEmitter {
                     hasDirective: "[String]"
                 },
                 resolve: (parent, { hasDirective }, context: GraphContext) => {
-                    return hasDirective.map((directive: string) => {
-                        //Get types with directives requested, filter out any types not allowed by the context permissions
-                        return getTypesWithDirective(this.composer, directive).map((x) => ({
+                    if (!hasDirective || hasDirective.length < 1) {
+                        return getTypesWithDirective(this.composer, '').map((x) => ({
                             name: x.name,
                             directives: x.directives,
                             def: x.def
-                        })) //.filter((a) => context.user.permissions.indexOf(`${a.name}:read`) > -1)
-                    })
+                        }))
+                    } else {
+                        return hasDirective.map((directive: string) => {
+                            //Get types with directives requested, filter out any types not allowed by the context permissions
+                            return getTypesWithDirective(this.composer, directive).map((x) => ({
+                                name: x.name,
+                                directives: x.directives,
+                                def: x.def
+                            })) //.filter((a) => context.user.permissions.indexOf(`${a.name}:read`) > -1)
+                        })
+                    }
 
                 }
             },

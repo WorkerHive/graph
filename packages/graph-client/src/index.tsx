@@ -5,11 +5,10 @@ declare global {
 }
 
 import { WorkhubFS } from '@workerhive/ipfs'
-
 import { useRealtime, RealtimeSync } from './yjs';
 import jwt_decode from 'jwt-decode'
 
-import { WorkhubProvider, useHub } from './react'
+import { WorkhubProvider, useHub, HubPlugin } from './react'
 import { Postman } from './postman'
 import { ActionFactory } from './actions'
 import { ModelStorage } from './models'
@@ -62,6 +61,7 @@ export class WorkhubClient {
     private hostURL?: URL;
     private hostName?: string;
 
+    public plugins: {[key: string]: Array<HubPlugin>} = {};
     private client?: Graph;
 
     //public models?: Array<any> = [];
@@ -87,9 +87,11 @@ export class WorkhubClient {
     public query: (query: string, variables?: object) => any = () => { };
     public mutation: (query: string, variables?: object) => any = () => { };
 
-    constructor(url?: string, setup_fn?: Function, dispatch?: any) {
+    constructor(url?: string, opts?: {plugins: {[key: string]: Array<HubPlugin>}}, setup_fn?: Function, dispatch?: any) {
         this.updateBaseURL(url)
         //  this.initClient()
+
+        if(opts?.plugins )this.plugins = opts.plugins
 
         console.log("Starting hub client with ", this.hubUrl + '/api')
         this.postman = new Postman(`${this.hubUrl}/api`)
@@ -157,19 +159,21 @@ export class WorkhubClient {
     async initIPFS(swarmKey: string) {
         console.log("INIT IPFS")
         this.swarmKey = swarmKey;
-        console.log(globalThis)
-        let globalIPFS: WorkhubFS = window.workhubFS;
-        if (globalIPFS){
-            console.log("Existing IPFS found, stopping...")
-            await globalIPFS.stop();
-        } 
-        window.workhubFS = new WorkhubFS({
-            Bootstrap: [],
-            Swarm: [
-                `/dns4/${this.hostName}/tcp/443/wss/p2p-webrtc-star`
-            ]
-        }, this.swarmKey)
+        if(swarmKey){
+            console.log(globalThis)
+            let globalIPFS: WorkhubFS = window.workhubFS;
+            if (globalIPFS){
+                console.log("Existing IPFS found, stopping...")
+                await globalIPFS.stop();
+            } 
+            window.workhubFS = new WorkhubFS({
+                Bootstrap: [],
+                Swarm: [
+                    `/dns4/${this.hostName}/tcp/443/wss/p2p-webrtc-star`
+                ]
+            }, this.swarmKey)
 
+        }
     }
 
 
@@ -345,72 +349,6 @@ export class WorkhubClient {
                     return result.data.bucketLayout;
                 }
         
-                this.actions['getIntegrationStores'] = async () => {
-                    let result = await this.query(`
-                        query GetStores {
-                            integrationStores{
-                                id
-                                name
-                                host
-                                user
-                                pass
-                                dbName
-                                type
-                            }
-                        }
-                    `)
-                    dispatch({type: `GETS_IntegrationStore`, data: result.data.integrationStores})
-                    return result.data.integrationStores;
-                }
-                this.actions['addStore'] = async (store: any) => {
-                    let result = await this.mutation(`
-                        mutation AddStore($store: IntegrationStoreInput){
-                            addIntegrationStore(integrationStore: $store){
-                                id
-                                name
-                                host
-                                user
-                                pass
-                                dbName
-                                type
-                            }
-                        }
-                    `, {
-                        store: store
-                    })
-                    dispatch({type: `ADD_IntegrationStore`, data: result.data.addIntegrationStore})
-                    return result.data.addIntegrationStore;
-                }
-                this.actions['updateStore'] = async (id: string, store: any) => {
-                    let result = await this.mutation(`
-                        mutation UpdateStore($id: String, $store: IntegrationStoreInput) {
-                            updateIntegrationStore(id: $id, integrationStore: $store){
-                                id
-                                name
-                                host
-                                user
-                                pass
-                                dbName
-                                type
-                            }
-                        }
-                    `, {
-                        store: store,
-                        id: id
-                    })
-                    dispatch({type: `UPDATE_IntegrationStore`, data: result.data.updateIntegrationStore, id: id})
-                    return result.data.updateIntegrationStore
-                }
-                this.actions['deleteStore'] = async (id: string) => {
-                    let result = await this.mutation(`
-                        mutation DeleteStore($id: String){
-                            deleteIntegrationStore(id: $id)
-                        }
-                    `, {
-                        id: id
-                    })
-                    dispatch({type: `DELETE_IntegrationStore`, id: id})
-                    return result.data.deleteIntegrationStore;
-                }*/
+       */
     }
 }
