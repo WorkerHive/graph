@@ -5,7 +5,7 @@ import { CRUD, IPFS } from '../packages/graph-plugins/lib';
 import { graphqlUploadExpress } from 'graphql-upload'
 
 import {WorkhubFS} from '../packages/graph-ipfs'
-import QueenDB from '@workerhive/queendb'
+import QueenDB from '../packages/queendb'
 
 //import  express from 'express';
 
@@ -17,17 +17,21 @@ const app = express();
 const fs = new WorkhubFS()
 const db = new QueenDB({
     host: process.env.QUEENDB_HOST || 'localhost',
-    port: 5432,
+    port: 5433,
     database: 'postgres',
     user: 'postgres',
-    password: process.env.QUEENDB_PASS || 'password'
+    password: process.env.QUEENDB_PASS || 'defaultpassword'
 });
 
 const graph = new HiveGraph({
     types: `
-        type TestType @crud{
-            id: ID @uuid
+        type Project @crud{
+            id: Int @id
             name: String @input
+            description: Description @input
+            start_date: Date @input
+            end_date: Date @input
+            status: String
         }
 
         type FSNode @upload{

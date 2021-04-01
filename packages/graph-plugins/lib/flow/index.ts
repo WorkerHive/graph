@@ -28,11 +28,16 @@ export const CRUD = (db: QueenDB) => {
             }
         })
 
-        db.setupTypeStore(configurable)
-        db.readCell('IntegrationMap', { id: 'root-map' }).then((flowMap) => {
-            db.rehydrate(flowMap)
-        })
+        db.on('ready', async () => {
+            await db.setupTypeStore(configurable)
+     
+            db.readCell('IntegrationMap', { id: 'root-map' }).then((flowMap) => {
+                console.log("Flow Map", flowMap)
+                db.rehydrate(flowMap)
+            })
 
+        })
+       
         const locations = [DirectiveLocation.OBJECT]
 
         const addRealtionships = (otc: ObjectTypeComposer) => {
@@ -141,6 +146,7 @@ export const CRUD = (db: QueenDB) => {
                     [queryAllKey]: {
                         type: `[${typeName}]`,
                         resolve: async (parent: any, args: any, context: any) => {
+                            console.log("Query", args)
                             if (hasPermission(context.user, typeName, 'read')) {
                                 return await db.readAllCell(typeName, {})
                             } else {

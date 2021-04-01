@@ -18,6 +18,9 @@
       "@workerhive/graph": [
         "graph-server/lib"
       ],
+      "@workerhive/queendb": [
+        "queendb/lib"
+      ],
       "@workerhive/plugins": [
         "graph-plugins/lib"
       ],

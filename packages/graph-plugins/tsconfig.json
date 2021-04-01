@@ -75,6 +75,9 @@
     },
     {
       "path": "../graph-ipfs/tsconfig.json"
+    },
+    {
+      "path": "../queendb/tsconfig.json"
     }
   ],
   "include": ["lib"],
