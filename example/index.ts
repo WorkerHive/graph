@@ -1,6 +1,6 @@
 import HiveGraph from '../packages/graph-server/lib'
 import {createReadStream} from 'fs';
-import { CRUD, IPFS } from '../packages/graph-plugins/lib';
+import { CRUD, IPFS, QueenDBPlugin } from '../packages/graph-plugins/lib';
 
 import { graphqlUploadExpress } from 'graphql-upload'
 
@@ -43,7 +43,10 @@ const graph = new HiveGraph({
     directives: {
         upload: [ IPFS(fs) ],
         crud: [ CRUD(db) ]
-    }
+    },
+    plugins: [
+        QueenDBPlugin(db)
+    ]
 })
 
 app.use(bodyParser.json())

@@ -1,7 +1,7 @@
 import GraphTransport from "./interfaces/GraphTransport";
 import TypeRegistry from "./registry/type";
 import { graphql, execute, GraphQLSchema, parse, Source } from "graphql";
-import { schemaComposer } from "graphql-compose";
+import { SchemaComposer, schemaComposer } from "graphql-compose";
 import { GraphConnector, GraphBase, BaseGraph } from "./interfaces/GraphConnector";
 import GraphContext from "./interfaces/GraphContext";
 import { getTypesWithDirective } from "./utils";
@@ -16,12 +16,15 @@ export interface HiveMiddleware{
 
 }
 
+export type HivePlugin = (composer: SchemaComposer<any>, args?: any) => {composer?: SchemaComposer<any>, Query?: any, Mutation?: any};
+
 export interface HiveGraphOptions{
     types?: string;
     resolvers?: any;
     directives?: {
         [key: string]: Array<HiveMiddleware>;
-    }
+    };
+    plugins?: Array<HivePlugin>;
 }
 
 export {
@@ -41,6 +44,8 @@ export default class HiveGraph extends BaseGraph{
         [key: string]: Array<HiveMiddleware>;
     } = {};
 
+    private plugins? : Array<HivePlugin> = [];
+
     private context: GraphContext = {};
 
     public schema: GraphQLSchema;
@@ -55,6 +60,7 @@ export default class HiveGraph extends BaseGraph{
         this.initialTypes = initialTypes(opts?.types || '')
         this.resolvers = opts?.resolvers
         this.directives = opts?.directives || {};
+        this.plugins = opts?.plugins || [];
 
         this.typeRegistry = new TypeRegistry(this.initialTypes, opts?.resolvers);
 
@@ -78,6 +84,17 @@ export default class HiveGraph extends BaseGraph{
 
         let typeSchema = this.typeRegistry.schema
 
+        let pluginQueries = {};
+        let pluginMutations = {};
+
+        this.plugins?.forEach(plugin => {
+            let { composer, Query, Mutation } = plugin(outputSchema)
+            if(Query) pluginQueries = merge(pluginQueries, Query)
+            if(Mutation) pluginMutations = merge(pluginMutations, Mutation)
+
+            if(composer) outputSchema.merge(composer)
+        })
+
         directives.forEach(directive => {
             outputSchema.addDirective(directive)
         })
@@ -88,9 +105,9 @@ export default class HiveGraph extends BaseGraph{
 
         let {queries, composer} = this.typeRegistry.applyDirectives(outputSchema, this.directives)
 //        outputSchema.merge(composer)
-        
-        outputSchema.Query.addFields(queries.Query)
-        outputSchema.Mutation.addFields(queries.Mutation)
+
+        outputSchema.Query.addFields(merge(queries.Query, pluginQueries))
+        outputSchema.Mutation.addFields(merge(queries.Mutation, pluginMutations))
 
         console.log(outputSchema.Query.toSDL())
 

@@ -9,7 +9,7 @@ export const CRUD = (db: QueenDB) => {
 
 
     return (directiveName: string, composer: SchemaComposer<any>) => {
-        composer.addTypeDefs(`
+      /*  composer.addTypeDefs(`
             input IntegrationMapInput{
                 nodes: JSON
                 links: JSON
@@ -20,7 +20,7 @@ export const CRUD = (db: QueenDB) => {
                 links: JSON
             }
         `)
-
+*/
         let configurable: any = [];
         composer.types.forEach((val, key, map) => {
             if (typeof (key) === 'string' && val instanceof ObjectTypeComposer && val.getDirectiveNames().indexOf('crud') > -1) {
