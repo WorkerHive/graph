@@ -1194,24 +1194,34 @@
         "affectsGlobalScope": false
       },
       "./lib/p2p-stack.js": {
-        "version": "1cf6b9897a5b6c918b184a0f4782598b3a10ce4071bb515c817f265249b5b5e0",
-        "signature": "276546e7f239c6a39668653dd658d43b5ddc64781306b5b208bd45a71aeb549d",
+        "version": "9ba88b4244e5718d948fd92d63aeecd28be132cf7b57908947d071b5cd55c9fb",
+        "signature": "bd104404b6d03baca1286a9284bfbb1f91c74a82b6c90c7f90e1115c489375fa",
         "affectsGlobalScope": true
       },
       "./lib/fs.js": {
-        "version": "43df76c37792afb9e1905e4f5146f774818278ef228b0044d0190e6ed45b3897",
+        "version": "cee5c27dd310bf937651e5b0c8066c6dc8114be91c056e5802a8b3d528f96e6b",
         "signature": "d789f24eef6ec601cd17c4ad5edd082de806d9f79972bbff7a6afe087af533e9",
         "affectsGlobalScope": true
       },
       "./lib/index.ts": {
-        "version": "4cb78778c6131af63a9c4202890bcf214781f42b60603126fbc9548a41374a05",
-        "signature": "e40b41624ea188e5d132f37db2929b3dbd14ab58de4fa506a90f8a438e53d4a5",
+        "version": "f73fed3f476122c44e7af1b188c850298bc4ccb9349066448a2c74a606849d5b",
+        "signature": "25d086b6d91bea73b42e449d421dd532348b4975e9bae7a32d1c799c17b1f734",
         "affectsGlobalScope": false
+      },
+      "./lib/node-stack.js": {
+        "version": "7c46102c35bc7fbe6154dc52f8caa0e595fad13a98f4c50b6c171938396b3079",
+        "signature": "7e278e7e1306bd6007c9d157a4821c0e15f69ee65eff5b1dc3b59c9a0c61c2e1",
+        "affectsGlobalScope": true
       },
       "./lib/queue.ts": {
         "version": "069be4de433e501f4ebf5e35595b54fb51d2a14f597172cae7c62c125a44c28b",
         "signature": "bf770be2e17c7a3acd5c34311228a5e9f61fa2efd48a38734e718e7802af9f11",
         "affectsGlobalScope": false
+      },
+      "./lib/react-stack.js": {
+        "version": "3a533a5e6ef78e3d7f387adef00f3dd76d3f1cf0d09d21c9d30b980c842e8250",
+        "signature": "659f5b48853030133550c8736f20b35213b9950c9dc367779a3b5480a892cfb6",
+        "affectsGlobalScope": true
       },
       "./node_modules/@types/component-emitter/index.d.ts": {
         "version": "a3a88c1869ba1022dfaefac47ff7a984ec62510e9b4d60988f91d5e523266c34",
@@ -2848,6 +2858,9 @@
         "./node_modules/libp2p-noise/dist/src/index.d.ts",
         "./node_modules/libp2p/dist/src/index.d.ts",
         "./node_modules/libp2p/dist/src/pnet/index.d.ts"
+      ],
+      "./lib/react-stack.js": [
+        "./lib/p2p-stack.js"
       ],
       "./node_modules/@types/bl/index.d.ts": [
         "./node_modules/@types/node/index.d.ts",
@@ -4739,6 +4752,10 @@
       "./lib/p2p-stack.js": [
         "./node_modules/libp2p-noise/dist/src/index.d.ts"
       ],
+      "./lib/react-stack.js": [
+        "./node_modules/libp2p-noise/dist/src/index.d.ts",
+        "./node_modules/libp2p/dist/src/pnet/index.d.ts"
+      ],
       "./node_modules/@types/bl/index.d.ts": [
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/node/stream.d.ts"
@@ -5966,8 +5983,10 @@
       "../../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
       "./lib/fs.js",
       "./lib/index.ts",
+      "./lib/node-stack.js",
       "./lib/p2p-stack.js",
       "./lib/queue.ts",
+      "./lib/react-stack.js",
       "./node_modules/@types/bl/index.d.ts",
       "./node_modules/@types/component-emitter/index.d.ts",
       "./node_modules/@types/cookie/index.d.ts",

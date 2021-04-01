@@ -13,7 +13,7 @@ export class ActionFactory {
 
     private lastUpdate?: Date;
 
-    private actions: any;
+    private actions: any = {};
 
     constructor(client: WorkhubClient, models: ModelStorage, dispatch: any) {
         this.client = client;

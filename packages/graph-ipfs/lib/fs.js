@@ -4,7 +4,7 @@ const {P2PStack} = require('./p2p-stack')
 const FSNode = async (config, repo, key) => {
     const node = await IPFS.create({
         repo: repo,
-        libp2p: P2PStack(key),
+        libp2p: config.p2p(key),
         config: {
             Bootstrap: config.Bootstrap || [],
             Addresses: {

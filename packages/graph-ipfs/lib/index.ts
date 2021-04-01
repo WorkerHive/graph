@@ -36,9 +36,10 @@ import IPFS, { CID } from 'ipfs-core'
 import { FSNode } from './fs'
 
 interface IPFSInterface {
-    repo: string;
-    Swarm: Array<any>;
-    Bootstrap: Array<any>;
+    repo?: string;
+    Swarm?: Array<any>;
+    Bootstrap?: Array<any>;
+    p2p?: any;
 }
 
 export const generateKey = () => {
@@ -60,7 +61,7 @@ export class  WorkhubFS {
 
     public version: number = 1;
 
-    constructor(config: any = {}, swarmKey?: string){
+    constructor(config: IPFSInterface = {}, swarmKey?: string){
         this.config = config;
         if(swarmKey){
             this.swarmKey = swarmKey

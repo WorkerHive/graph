@@ -3,7 +3,7 @@ import * as Y from 'yjs';
 import {IndexeddbPersistence} from 'y-indexeddb'
 import { WebsocketProvider } from 'y-websocket';
 
-import 'websocket-polyfill'
+//import 'websocket-polyfill'
 import { cleanObject } from './utils';
 import { YMap } from 'yjs/dist/src/internals';
 import { isEqual } from 'lodash';

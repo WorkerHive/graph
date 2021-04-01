@@ -5,6 +5,8 @@ declare global {
 }
 
 import { WorkhubFS } from '@workerhive/ipfs'
+import P2PStack from '@workerhive/ipfs/dist/react-stack'
+
 import { useRealtime, RealtimeSync } from './yjs';
 import jwt_decode from 'jwt-decode'
 
@@ -167,6 +169,7 @@ export class WorkhubClient {
                 await globalIPFS.stop();
             } 
             window.workhubFS = new WorkhubFS({
+                p2p: P2PStack,
                 Bootstrap: [],
                 Swarm: [
                     `/dns4/${this.hostName}/tcp/443/wss/p2p-webrtc-star`
