@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/WorkerHive/graph/issues"
   },
-  "dependencies": {
+  "devDependencies": {
     "@workerhive/graph": "^2.2.8",
     "@workerhive/ipfs": "^2.2.9",
     "@workerhive/queendb": "^2.2.6"

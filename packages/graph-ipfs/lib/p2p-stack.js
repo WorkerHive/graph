@@ -24,6 +24,6 @@ const P2PStack = (transport, config) => {
     }
 }
 
-    module.exports = {
-        P2PStack
-    }
+module.exports = {
+    P2PStack
+}

@@ -1194,7 +1194,7 @@
         "affectsGlobalScope": false
       },
       "./lib/p2p-stack.js": {
-        "version": "9ba88b4244e5718d948fd92d63aeecd28be132cf7b57908947d071b5cd55c9fb",
+        "version": "274a5a0438c89d9ee81925436b2d2531a90a9f0aa77c44afb6e021a5cb04a857",
         "signature": "bd104404b6d03baca1286a9284bfbb1f91c74a82b6c90c7f90e1115c489375fa",
         "affectsGlobalScope": true
       },
@@ -1219,7 +1219,7 @@
         "affectsGlobalScope": false
       },
       "./lib/react-stack.js": {
-        "version": "3a533a5e6ef78e3d7f387adef00f3dd76d3f1cf0d09d21c9d30b980c842e8250",
+        "version": "c940a7932217b1cad32fa739140c34830d89880a537ad258b689e79cb945c90e",
         "signature": "659f5b48853030133550c8736f20b35213b9950c9dc367779a3b5480a892cfb6",
         "affectsGlobalScope": true
       },

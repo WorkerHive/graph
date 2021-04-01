@@ -1,6 +1,6 @@
-const transportKey = WebRTCStar.prototype[Symbol.toStringTag]
 const WebRTCStar = require('libp2p-webrtc-star')
 const { P2PStack } = require('./p2p-stack')
+const transportKey = WebRTCStar.prototype[Symbol.toStringTag]
 
 const wrtcTransport = {
     enabled: true
