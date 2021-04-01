@@ -1,6 +1,6 @@
 {
   "name": "@workerhive/queendb",
-  "version": "2.2.4",
+  "version": "2.2.6",
   "private": false,
   "description": "Command and connect all your databases",
   "keywords": [

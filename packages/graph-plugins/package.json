@@ -1,6 +1,6 @@
 {
   "name": "@workerhive/plugins",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "description": "> TODO: description",
   "author": "Ross Leitch <professional.balbatross@gmail.com>",
   "homepage": "https://github.com/WorkerHive/graph#readme",
@@ -26,8 +26,8 @@
   },
   "dependencies": {
     "@workerhive/graph": "^2.2.4",
-    "@workerhive/ipfs": "^2.2.4",
-    "@workerhive/queendb": "^2.2.4"
+    "@workerhive/ipfs": "^2.2.6",
+    "@workerhive/queendb": "^2.2.6"
   },
   "gitHead": "ff7d4d655411b3957400870310dc54b0f64d058c"
 }
