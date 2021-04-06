@@ -23,3 +23,26 @@ export const rawType = (typeName: string) => {
     }
     return type;
 }
+
+export const getFields = (models: any[], type: any, parent?: any) => {
+      
+        return type.def.map((x: any) => {
+            let raw = rawType(x.type);
+
+            if (isNativeType(raw)) {
+                return x.name
+            } else {
+                let model = models.filter((a: any) => a.name == raw)[0];
+
+                //Recursion blocker, hopefully stops some of the circular references
+                if (!parent || parent.name != raw) {
+                    return `
+                        ${x.name} {
+                            ${getFields(models, model, type)}
+                        }
+                    `
+                }
+            }
+        }).join(`\n`)
+
+    }

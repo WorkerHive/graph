@@ -4,34 +4,13 @@ import { camelCase, ObjectTypeComposer, SchemaComposer } from "graphql-compose"
 
 import { applyGenerators, createGenerators, GraphContext, updateGenerators } from '@workerhive/graph'
 import { Type } from "@workerhive/graph/dist/registry/type"
-import { cleanObject, isNativeType, rawType } from "../utils"
+import { cleanObject, getFields, isNativeType, rawType } from "../utils"
 
 export const client = (models: any, client: any, dispatch: any) => {
     let actions : any = {};
 
      //Takes a type model and iterates over available keys, if key isn't native getFields will be called again to fill out the query fields
-    const getFields = (type: any, parent?: any) => {
-      
-        return type.def.map((x: any) => {
-            let raw = rawType(x.type);
-
-            if (isNativeType(raw)) {
-                return x.name
-            } else {
-                let model = models.filter((a: any) => a.name == raw)[0];
-
-                //Recursion blocker, hopefully stops some of the circular references
-                if (!parent || parent.name != raw) {
-                    return `
-                        ${x.name} {
-                            ${getFields(model, type)}
-                        }
-                    `
-                }
-            }
-        }).join(`\n`)
-
-    }
+   
 
     const setupAdd = (model: any, fields: any) => {
         actions[`add${model.name}`] = (item: any) => {
@@ -128,7 +107,7 @@ export const client = (models: any, client: any, dispatch: any) => {
     }
 
     models.forEach((model: any) => {
-        const fields = getFields(model)
+        const fields = getFields(models, model)
 
         setupAdd(model, fields)
         setupDelete(model, fields)

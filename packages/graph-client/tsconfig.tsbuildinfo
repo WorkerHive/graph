@@ -2308,52 +2308,77 @@
         "signature": "25d086b6d91bea73b42e449d421dd532348b4975e9bae7a32d1c799c17b1f734",
         "affectsGlobalScope": false
       },
-      "../graph-ipfs/node_modules/buffer/index.d.ts": {
+      "./node_modules/@types/bl/index.d.ts": {
+        "version": "d23ef16ff98628c109de90d06061083706944d8d61fbfe78721f5c447f084aba",
+        "signature": "d23ef16ff98628c109de90d06061083706944d8d61fbfe78721f5c447f084aba",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/buffer/index.d.ts": {
         "version": "8e9c23ba78aabc2e0a27033f18737a6df754067731e69dc5f52823957d60a4b6",
         "signature": "8e9c23ba78aabc2e0a27033f18737a6df754067731e69dc5f52823957d60a4b6",
         "affectsGlobalScope": false
       },
-      "../graph-ipfs/node_modules/it-pb-rpc/src/index.d.ts": {
+      "./node_modules/it-pb-rpc/src/index.d.ts": {
         "version": "a6ee96a0835f6c2864ea37e501d163f636d8dc2ced96fac876f3f3ef9f945979",
         "signature": "a6ee96a0835f6c2864ea37e501d163f636d8dc2ced96fac876f3f3ef9f945979",
         "affectsGlobalScope": false
       },
-      "../graph-ipfs/node_modules/libp2p-noise/dist/src/@types/basic.d.ts": {
+      "./node_modules/libp2p-noise/dist/src/@types/basic.d.ts": {
         "version": "8859be2c56a5ea30dcfd7a7061b02a91f020dbd5862e68dab5665d12041d0bbe",
         "signature": "8859be2c56a5ea30dcfd7a7061b02a91f020dbd5862e68dab5665d12041d0bbe",
         "affectsGlobalScope": false
       },
-      "../graph-ipfs/node_modules/libp2p-noise/dist/src/@types/libp2p.d.ts": {
+      "./node_modules/peer-id/src/index.d.ts": {
+        "version": "db363aab1e392685403291b395d4b942c69d79ef51fce3d3f27e92287cd33ba7",
+        "signature": "db363aab1e392685403291b395d4b942c69d79ef51fce3d3f27e92287cd33ba7",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/libp2p-noise/dist/src/@types/libp2p.d.ts": {
         "version": "b8ba155119c8ff39d23a234c5fb4aa442ab15c4f5ab902bfd40a760a7c8cab6b",
         "signature": "b8ba155119c8ff39d23a234c5fb4aa442ab15c4f5ab902bfd40a760a7c8cab6b",
         "affectsGlobalScope": false
       },
-      "../graph-ipfs/node_modules/libp2p-noise/dist/src/noise.d.ts": {
+      "./node_modules/libp2p-noise/dist/src/noise.d.ts": {
         "version": "d02cd0592bd46cbe9e17663e996aa90fdaa4456e6f5ec3b7b7780090162154e5",
         "signature": "d02cd0592bd46cbe9e17663e996aa90fdaa4456e6f5ec3b7b7780090162154e5",
         "affectsGlobalScope": false
       },
-      "../graph-ipfs/node_modules/libp2p-noise/dist/src/index.d.ts": {
+      "./node_modules/libp2p-noise/dist/src/index.d.ts": {
         "version": "3b11367745360cb58ca398e7b6c176a711c12b7d49c10f63af995558abdaa778",
         "signature": "3b11367745360cb58ca398e7b6c176a711c12b7d49c10f63af995558abdaa778",
         "affectsGlobalScope": false
       },
-      "../graph-ipfs/node_modules/libp2p/dist/src/pnet/errors.d.ts": {
+      "./node_modules/libp2p-interfaces/dist/src/stream-muxer/types.d.ts": {
+        "version": "698784122aaac6b31270cd3a338e0837175a652c227faa31be2054d73a16bff0",
+        "signature": "698784122aaac6b31270cd3a338e0837175a652c227faa31be2054d73a16bff0",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/multiaddr/src/index.d.ts": {
+        "version": "a3401f8da5c76c7f7a16b8734395d6f8a01b95b8b417e8512839a77e170f3260",
+        "signature": "a3401f8da5c76c7f7a16b8734395d6f8a01b95b8b417e8512839a77e170f3260",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/libp2p-interfaces/dist/src/transport/types.d.ts": {
+        "version": "bdc0979a83a81f7a4fd80e9d8f97160851189c98a5940b2ec5b4c071788da2a6",
+        "signature": "bdc0979a83a81f7a4fd80e9d8f97160851189c98a5940b2ec5b4c071788da2a6",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/libp2p/dist/src/pnet/errors.d.ts": {
         "version": "da1217e76d97391bdfe5b49e00280def199c9f24aea3215e5ecf7b2f7efb0051",
         "signature": "da1217e76d97391bdfe5b49e00280def199c9f24aea3215e5ecf7b2f7efb0051",
         "affectsGlobalScope": false
       },
-      "../graph-ipfs/node_modules/libp2p/dist/src/pnet/key-generator.d.ts": {
+      "./node_modules/libp2p/dist/src/pnet/key-generator.d.ts": {
         "version": "73d255c2287056b2ec6e63b58d16b436fa09d147cfd6090110b68489f4fd1448",
         "signature": "73d255c2287056b2ec6e63b58d16b436fa09d147cfd6090110b68489f4fd1448",
         "affectsGlobalScope": false
       },
-      "../graph-ipfs/node_modules/libp2p/dist/src/pnet/index.d.ts": {
+      "./node_modules/libp2p/dist/src/pnet/index.d.ts": {
         "version": "d5c7c0ed7211a4ebdd47dcb54fbd24c4c9614c7fc102e7ac9acf9595df3b9e2c",
         "signature": "d5c7c0ed7211a4ebdd47dcb54fbd24c4c9614c7fc102e7ac9acf9595df3b9e2c",
         "affectsGlobalScope": false
       },
-      "../graph-ipfs/dist/react-stack.d.ts": {
+      "./node_modules/@workerhive/ipfs/dist/react-stack.d.ts": {
         "version": "659f5b48853030133550c8736f20b35213b9950c9dc367779a3b5480a892cfb6",
         "signature": "659f5b48853030133550c8736f20b35213b9950c9dc367779a3b5480a892cfb6",
         "affectsGlobalScope": false
@@ -2764,7 +2789,7 @@
         "affectsGlobalScope": false
       },
       "./src/actions/index.ts": {
-        "version": "4948456475cacbf90c6f693e258bdd0baa3480b1b19ed9eac82942b30cd9d181",
+        "version": "f3168785d0250f50d3418d5f00700cec73079cdebbcddc003da0ac3546d4afa9",
         "signature": "5983e77ad8ad2b90c89aabc2424b4da692d2be7a597f98cca2fdc949661417dc",
         "affectsGlobalScope": false
       },
@@ -2929,18 +2954,13 @@
         "affectsGlobalScope": false
       },
       "./src/graph.ts": {
-        "version": "a9cf1c99bcdd48466569c854c889968e5c505d458e127977e0d5f31154bf51cf",
-        "signature": "bfa878266dcf175f87a820c94f062931eef26785e64b55ef37a187068bb227aa",
+        "version": "39ebd799097fc1d7f886058b7a326f988dbec7f151a4cc51e41d67f1820abed2",
+        "signature": "106d0864e8b30756578fff1f4d8f343e77fbcfe414587141304bca335b4f2ce0",
         "affectsGlobalScope": false
       },
       "./src/workflows.ts": {
         "version": "2d3c54d5618c8c531f2545441f725ccac4266b627f1e51bca1c7c2624b9d033b",
         "signature": "f476c9315a6ddc6f79556e948474c3d6c08b84164362ba7f2269c74915ef1689",
-        "affectsGlobalScope": false
-      },
-      "./node_modules/@types/bl/index.d.ts": {
-        "version": "d23ef16ff98628c109de90d06061083706944d8d61fbfe78721f5c447f084aba",
-        "signature": "d23ef16ff98628c109de90d06061083706944d8d61fbfe78721f5c447f084aba",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/component-emitter/index.d.ts": {
@@ -5002,6 +5022,10 @@
         "./node_modules/@types/scheduler/tracing.d.ts",
         "./node_modules/csstype/index.d.ts"
       ],
+      "./node_modules/@workerhive/ipfs/dist/react-stack.d.ts": [
+        "./node_modules/libp2p-noise/dist/src/index.d.ts",
+        "./node_modules/libp2p/dist/src/pnet/index.d.ts"
+      ],
       "./node_modules/@wry/context/lib/context.d.ts": [
         "./node_modules/@wry/context/lib/slot.d.ts"
       ],
@@ -5263,6 +5287,43 @@
         "./node_modules/graphql/language/source.d.ts",
         "./node_modules/graphql/language/tokenKind.d.ts"
       ],
+      "./node_modules/it-pb-rpc/src/index.d.ts": [
+        "../graph-ipfs/node_modules/@types/bl/index.d.ts",
+        "./node_modules/@types/node/buffer.d.ts"
+      ],
+      "./node_modules/libp2p-interfaces/dist/src/stream-muxer/types.d.ts": [
+        "../graph-ipfs/node_modules/@types/bl/index.d.ts"
+      ],
+      "./node_modules/libp2p-interfaces/dist/src/transport/types.d.ts": [
+        "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/connection/connection.d.ts",
+        "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/stream-muxer/types.d.ts",
+        "../graph-ipfs/node_modules/multiaddr/src/index.d.ts",
+        "./node_modules/@types/node/events.d.ts",
+        "./node_modules/@types/node/index.d.ts"
+      ],
+      "./node_modules/libp2p-noise/dist/src/@types/basic.d.ts": [
+        "./node_modules/@types/node/buffer.d.ts"
+      ],
+      "./node_modules/libp2p-noise/dist/src/@types/libp2p.d.ts": [
+        "../graph-ipfs/node_modules/peer-id/src/index.d.ts",
+        "./node_modules/libp2p-noise/dist/src/@types/basic.d.ts"
+      ],
+      "./node_modules/libp2p-noise/dist/src/index.d.ts": [
+        "./node_modules/libp2p-noise/dist/src/noise.d.ts"
+      ],
+      "./node_modules/libp2p-noise/dist/src/noise.d.ts": [
+        "../graph-ipfs/node_modules/peer-id/src/index.d.ts",
+        "./node_modules/it-pb-rpc/src/index.d.ts",
+        "./node_modules/libp2p-noise/dist/src/@types/basic.d.ts",
+        "./node_modules/libp2p-noise/dist/src/@types/libp2p.d.ts"
+      ],
+      "./node_modules/libp2p/dist/src/pnet/index.d.ts": [
+        "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/stream-muxer/types.d.ts",
+        "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/transport/types.d.ts",
+        "../graph-ipfs/node_modules/multiaddr/src/index.d.ts",
+        "./node_modules/libp2p/dist/src/pnet/errors.d.ts",
+        "./node_modules/libp2p/dist/src/pnet/key-generator.d.ts"
+      ],
       "./node_modules/optimism/lib/context.d.ts": [
         "./node_modules/@wry/context/lib/context.d.ts",
         "./node_modules/optimism/lib/entry.d.ts"
@@ -5284,6 +5345,10 @@
       ],
       "./node_modules/pascal-case/dist/index.d.ts": [
         "./node_modules/no-case/dist/index.d.ts"
+      ],
+      "./node_modules/peer-id/src/index.d.ts": [
+        "../graph-ipfs/node_modules/cids/dist/src/index.d.ts",
+        "../graph-ipfs/node_modules/libp2p-crypto/src/index.d.ts"
       ],
       "./node_modules/zen-observable-ts/lib/index.d.ts": [
         "./node_modules/zen-observable-ts/lib/zenObservable.d.ts"
@@ -5324,7 +5389,7 @@
       ],
       "./src/index.tsx": [
         "../graph-ipfs/dist/index.d.ts",
-        "../graph-ipfs/dist/react-stack.d.ts",
+        "./node_modules/@workerhive/ipfs/dist/react-stack.d.ts",
         "./node_modules/jwt-decode/index.d.ts",
         "./src/actions/index.ts",
         "./src/auth/index.ts",
@@ -5361,10 +5426,6 @@
         "../graph-ipfs/node_modules/@types/node/index.d.ts",
         "../graph-ipfs/node_modules/ipfs-core/dist/src/index.d.ts",
         "../graph-ipfs/node_modules/libp2p/dist/src/index.d.ts"
-      ],
-      "../graph-ipfs/dist/react-stack.d.ts": [
-        "../graph-ipfs/node_modules/libp2p-noise/dist/src/index.d.ts",
-        "../graph-ipfs/node_modules/libp2p/dist/src/pnet/index.d.ts"
       ],
       "../graph-ipfs/node_modules/@types/bl/index.d.ts": [
         "./node_modules/@types/node/index.d.ts",
@@ -5959,10 +6020,6 @@
       "../graph-ipfs/node_modules/ipfs-utils/dist/src/types.d.ts": [
         "../graph-ipfs/node_modules/electron-fetch/index.d.ts"
       ],
-      "../graph-ipfs/node_modules/it-pb-rpc/src/index.d.ts": [
-        "../graph-ipfs/node_modules/@types/bl/index.d.ts",
-        "./node_modules/@types/node/buffer.d.ts"
-      ],
       "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/connection/connection.d.ts": [
         "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/stream-muxer/types.d.ts",
         "../graph-ipfs/node_modules/multiaddr/src/index.d.ts",
@@ -6002,22 +6059,6 @@
         "../graph-ipfs/node_modules/multiaddr/src/index.d.ts",
         "./node_modules/@types/node/events.d.ts",
         "./node_modules/@types/node/index.d.ts"
-      ],
-      "../graph-ipfs/node_modules/libp2p-noise/dist/src/@types/basic.d.ts": [
-        "./node_modules/@types/node/buffer.d.ts"
-      ],
-      "../graph-ipfs/node_modules/libp2p-noise/dist/src/@types/libp2p.d.ts": [
-        "../graph-ipfs/node_modules/libp2p-noise/dist/src/@types/basic.d.ts",
-        "../graph-ipfs/node_modules/peer-id/src/index.d.ts"
-      ],
-      "../graph-ipfs/node_modules/libp2p-noise/dist/src/index.d.ts": [
-        "../graph-ipfs/node_modules/libp2p-noise/dist/src/noise.d.ts"
-      ],
-      "../graph-ipfs/node_modules/libp2p-noise/dist/src/noise.d.ts": [
-        "../graph-ipfs/node_modules/it-pb-rpc/src/index.d.ts",
-        "../graph-ipfs/node_modules/libp2p-noise/dist/src/@types/basic.d.ts",
-        "../graph-ipfs/node_modules/libp2p-noise/dist/src/@types/libp2p.d.ts",
-        "../graph-ipfs/node_modules/peer-id/src/index.d.ts"
       ],
       "../graph-ipfs/node_modules/libp2p/dist/src/address-manager/index.d.ts": [
         "../graph-ipfs/node_modules/libp2p/dist/src/types.d.ts",
@@ -6170,13 +6211,6 @@
         "../graph-ipfs/node_modules/libp2p/dist/src/peer-store/book.d.ts",
         "../graph-ipfs/node_modules/libp2p/dist/src/peer-store/index.d.ts",
         "../graph-ipfs/node_modules/peer-id/src/index.d.ts"
-      ],
-      "../graph-ipfs/node_modules/libp2p/dist/src/pnet/index.d.ts": [
-        "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/stream-muxer/types.d.ts",
-        "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/transport/types.d.ts",
-        "../graph-ipfs/node_modules/libp2p/dist/src/pnet/errors.d.ts",
-        "../graph-ipfs/node_modules/libp2p/dist/src/pnet/key-generator.d.ts",
-        "../graph-ipfs/node_modules/multiaddr/src/index.d.ts"
       ],
       "../graph-ipfs/node_modules/libp2p/dist/src/record/envelope/index.d.ts": [
         "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/record/types.d.ts",
@@ -7996,6 +8030,10 @@
         "./node_modules/@types/scheduler/tracing.d.ts",
         "./node_modules/csstype/index.d.ts"
       ],
+      "./node_modules/@workerhive/ipfs/dist/react-stack.d.ts": [
+        "./node_modules/libp2p-noise/dist/src/index.d.ts",
+        "./node_modules/libp2p/dist/src/pnet/index.d.ts"
+      ],
       "./node_modules/@wry/context/lib/context.d.ts": [
         "./node_modules/@wry/context/lib/slot.d.ts"
       ],
@@ -8257,6 +8295,43 @@
         "./node_modules/graphql/language/source.d.ts",
         "./node_modules/graphql/language/tokenKind.d.ts"
       ],
+      "./node_modules/it-pb-rpc/src/index.d.ts": [
+        "../graph-ipfs/node_modules/@types/bl/index.d.ts",
+        "./node_modules/@types/node/buffer.d.ts"
+      ],
+      "./node_modules/libp2p-interfaces/dist/src/stream-muxer/types.d.ts": [
+        "../graph-ipfs/node_modules/@types/bl/index.d.ts"
+      ],
+      "./node_modules/libp2p-interfaces/dist/src/transport/types.d.ts": [
+        "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/connection/connection.d.ts",
+        "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/stream-muxer/types.d.ts",
+        "../graph-ipfs/node_modules/multiaddr/src/index.d.ts",
+        "./node_modules/@types/node/events.d.ts",
+        "./node_modules/@types/node/index.d.ts"
+      ],
+      "./node_modules/libp2p-noise/dist/src/@types/basic.d.ts": [
+        "./node_modules/@types/node/buffer.d.ts"
+      ],
+      "./node_modules/libp2p-noise/dist/src/@types/libp2p.d.ts": [
+        "../graph-ipfs/node_modules/peer-id/src/index.d.ts",
+        "./node_modules/libp2p-noise/dist/src/@types/basic.d.ts"
+      ],
+      "./node_modules/libp2p-noise/dist/src/index.d.ts": [
+        "./node_modules/libp2p-noise/dist/src/noise.d.ts"
+      ],
+      "./node_modules/libp2p-noise/dist/src/noise.d.ts": [
+        "../graph-ipfs/node_modules/peer-id/src/index.d.ts",
+        "./node_modules/it-pb-rpc/src/index.d.ts",
+        "./node_modules/libp2p-noise/dist/src/@types/basic.d.ts",
+        "./node_modules/libp2p-noise/dist/src/@types/libp2p.d.ts"
+      ],
+      "./node_modules/libp2p/dist/src/pnet/index.d.ts": [
+        "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/stream-muxer/types.d.ts",
+        "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/transport/types.d.ts",
+        "../graph-ipfs/node_modules/multiaddr/src/index.d.ts",
+        "./node_modules/libp2p/dist/src/pnet/errors.d.ts",
+        "./node_modules/libp2p/dist/src/pnet/key-generator.d.ts"
+      ],
       "./node_modules/optimism/lib/context.d.ts": [
         "./node_modules/@wry/context/lib/context.d.ts",
         "./node_modules/optimism/lib/entry.d.ts"
@@ -8278,6 +8353,10 @@
       ],
       "./node_modules/pascal-case/dist/index.d.ts": [
         "./node_modules/no-case/dist/index.d.ts"
+      ],
+      "./node_modules/peer-id/src/index.d.ts": [
+        "../graph-ipfs/node_modules/cids/dist/src/index.d.ts",
+        "../graph-ipfs/node_modules/libp2p-crypto/src/index.d.ts"
       ],
       "./node_modules/zen-observable-ts/lib/index.d.ts": [
         "./node_modules/zen-observable-ts/lib/zenObservable.d.ts"
@@ -8324,10 +8403,6 @@
         "../graph-ipfs/node_modules/@types/node/index.d.ts",
         "../graph-ipfs/node_modules/ipfs-core/dist/src/index.d.ts",
         "../graph-ipfs/node_modules/libp2p/dist/src/index.d.ts"
-      ],
-      "../graph-ipfs/dist/react-stack.d.ts": [
-        "../graph-ipfs/node_modules/libp2p-noise/dist/src/index.d.ts",
-        "../graph-ipfs/node_modules/libp2p/dist/src/pnet/index.d.ts"
       ],
       "../graph-ipfs/node_modules/@types/bl/index.d.ts": [
         "./node_modules/@types/node/index.d.ts",
@@ -8869,10 +8944,6 @@
       "../graph-ipfs/node_modules/ipfs-utils/dist/src/types.d.ts": [
         "../graph-ipfs/node_modules/electron-fetch/index.d.ts"
       ],
-      "../graph-ipfs/node_modules/it-pb-rpc/src/index.d.ts": [
-        "../graph-ipfs/node_modules/@types/bl/index.d.ts",
-        "./node_modules/@types/node/buffer.d.ts"
-      ],
       "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/connection/connection.d.ts": [
         "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/stream-muxer/types.d.ts",
         "../graph-ipfs/node_modules/multiaddr/src/index.d.ts",
@@ -8912,22 +8983,6 @@
         "../graph-ipfs/node_modules/multiaddr/src/index.d.ts",
         "./node_modules/@types/node/events.d.ts",
         "./node_modules/@types/node/index.d.ts"
-      ],
-      "../graph-ipfs/node_modules/libp2p-noise/dist/src/@types/basic.d.ts": [
-        "./node_modules/@types/node/buffer.d.ts"
-      ],
-      "../graph-ipfs/node_modules/libp2p-noise/dist/src/@types/libp2p.d.ts": [
-        "../graph-ipfs/node_modules/libp2p-noise/dist/src/@types/basic.d.ts",
-        "../graph-ipfs/node_modules/peer-id/src/index.d.ts"
-      ],
-      "../graph-ipfs/node_modules/libp2p-noise/dist/src/index.d.ts": [
-        "../graph-ipfs/node_modules/libp2p-noise/dist/src/noise.d.ts"
-      ],
-      "../graph-ipfs/node_modules/libp2p-noise/dist/src/noise.d.ts": [
-        "../graph-ipfs/node_modules/it-pb-rpc/src/index.d.ts",
-        "../graph-ipfs/node_modules/libp2p-noise/dist/src/@types/basic.d.ts",
-        "../graph-ipfs/node_modules/libp2p-noise/dist/src/@types/libp2p.d.ts",
-        "../graph-ipfs/node_modules/peer-id/src/index.d.ts"
       ],
       "../graph-ipfs/node_modules/libp2p/dist/src/address-manager/index.d.ts": [
         "../graph-ipfs/node_modules/libp2p/dist/src/types.d.ts",
@@ -9080,13 +9135,6 @@
         "../graph-ipfs/node_modules/libp2p/dist/src/peer-store/book.d.ts",
         "../graph-ipfs/node_modules/libp2p/dist/src/peer-store/index.d.ts",
         "../graph-ipfs/node_modules/peer-id/src/index.d.ts"
-      ],
-      "../graph-ipfs/node_modules/libp2p/dist/src/pnet/index.d.ts": [
-        "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/stream-muxer/types.d.ts",
-        "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/transport/types.d.ts",
-        "../graph-ipfs/node_modules/libp2p/dist/src/pnet/errors.d.ts",
-        "../graph-ipfs/node_modules/libp2p/dist/src/pnet/key-generator.d.ts",
-        "../graph-ipfs/node_modules/multiaddr/src/index.d.ts"
       ],
       "../graph-ipfs/node_modules/libp2p/dist/src/record/envelope/index.d.ts": [
         "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/record/types.d.ts",
@@ -9518,6 +9566,7 @@
       "./node_modules/@types/scheduler/index.d.ts",
       "./node_modules/@types/scheduler/tracing.d.ts",
       "./node_modules/@types/zen-observable/index.d.ts",
+      "./node_modules/@workerhive/ipfs/dist/react-stack.d.ts",
       "./node_modules/@wry/context/lib/context.d.ts",
       "./node_modules/@wry/context/lib/slot.d.ts",
       "./node_modules/@wry/trie/lib/trie.d.ts",
@@ -9581,13 +9630,25 @@
       "./node_modules/apollo-utilities/lib/util/warnOnce.d.ts",
       "./node_modules/apollo-utilities/node_modules/@wry/equality/lib/equality.d.ts",
       "./node_modules/axios/index.d.ts",
+      "./node_modules/buffer/index.d.ts",
       "./node_modules/camel-case/dist/index.d.ts",
       "./node_modules/csstype/index.d.ts",
       "./node_modules/graphql-tag/lib/index.d.ts",
       "./node_modules/graphql/language/ast.d.ts",
       "./node_modules/graphql/language/source.d.ts",
       "./node_modules/graphql/language/tokenKind.d.ts",
+      "./node_modules/it-pb-rpc/src/index.d.ts",
       "./node_modules/jwt-decode/index.d.ts",
+      "./node_modules/libp2p-interfaces/dist/src/stream-muxer/types.d.ts",
+      "./node_modules/libp2p-interfaces/dist/src/transport/types.d.ts",
+      "./node_modules/libp2p-noise/dist/src/@types/basic.d.ts",
+      "./node_modules/libp2p-noise/dist/src/@types/libp2p.d.ts",
+      "./node_modules/libp2p-noise/dist/src/index.d.ts",
+      "./node_modules/libp2p-noise/dist/src/noise.d.ts",
+      "./node_modules/libp2p/dist/src/pnet/errors.d.ts",
+      "./node_modules/libp2p/dist/src/pnet/index.d.ts",
+      "./node_modules/libp2p/dist/src/pnet/key-generator.d.ts",
+      "./node_modules/multiaddr/src/index.d.ts",
       "./node_modules/no-case/dist/index.d.ts",
       "./node_modules/optimism/lib/context.d.ts",
       "./node_modules/optimism/lib/dep.d.ts",
@@ -9595,6 +9656,7 @@
       "./node_modules/optimism/lib/helpers.d.ts",
       "./node_modules/optimism/lib/index.d.ts",
       "./node_modules/pascal-case/dist/index.d.ts",
+      "./node_modules/peer-id/src/index.d.ts",
       "./node_modules/symbol-observable/index.d.ts",
       "./node_modules/ts-invariant/lib/invariant.d.ts",
       "./node_modules/zen-observable-ts/lib/index.d.ts",
@@ -9615,11 +9677,9 @@
       "./src/workflows.ts",
       "./src/yjs.ts",
       "../graph-ipfs/dist/index.d.ts",
-      "../graph-ipfs/dist/react-stack.d.ts",
       "../graph-ipfs/node_modules/@types/bl/index.d.ts",
       "../graph-ipfs/node_modules/@types/debug/index.d.ts",
       "../graph-ipfs/node_modules/bignumber.js/bignumber.d.ts",
-      "../graph-ipfs/node_modules/buffer/index.d.ts",
       "../graph-ipfs/node_modules/cids/dist/src/index.d.ts",
       "../graph-ipfs/node_modules/electron-fetch/index.d.ts",
       "../graph-ipfs/node_modules/interface-datastore/dist/src/key.d.ts",
@@ -9719,7 +9779,6 @@
       "../graph-ipfs/node_modules/ipfs-utils/dist/src/files/glob-source.d.ts",
       "../graph-ipfs/node_modules/ipfs-utils/dist/src/files/url-source.d.ts",
       "../graph-ipfs/node_modules/ipfs-utils/dist/src/types.d.ts",
-      "../graph-ipfs/node_modules/it-pb-rpc/src/index.d.ts",
       "../graph-ipfs/node_modules/it-pushable/index.d.ts",
       "../graph-ipfs/node_modules/libp2p-crypto/src/index.d.ts",
       "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/connection/connection.d.ts",
@@ -9733,10 +9792,6 @@
       "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/topology/index.d.ts",
       "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/transport/types.d.ts",
       "../graph-ipfs/node_modules/libp2p-interfaces/dist/src/types.d.ts",
-      "../graph-ipfs/node_modules/libp2p-noise/dist/src/@types/basic.d.ts",
-      "../graph-ipfs/node_modules/libp2p-noise/dist/src/@types/libp2p.d.ts",
-      "../graph-ipfs/node_modules/libp2p-noise/dist/src/index.d.ts",
-      "../graph-ipfs/node_modules/libp2p-noise/dist/src/noise.d.ts",
       "../graph-ipfs/node_modules/libp2p/dist/src/address-manager/index.d.ts",
       "../graph-ipfs/node_modules/libp2p/dist/src/circuit/auto-relay.d.ts",
       "../graph-ipfs/node_modules/libp2p/dist/src/circuit/index.d.ts",
@@ -9760,9 +9815,6 @@
       "../graph-ipfs/node_modules/libp2p/dist/src/peer-store/metadata-book.d.ts",
       "../graph-ipfs/node_modules/libp2p/dist/src/peer-store/persistent/index.d.ts",
       "../graph-ipfs/node_modules/libp2p/dist/src/peer-store/proto-book.d.ts",
-      "../graph-ipfs/node_modules/libp2p/dist/src/pnet/errors.d.ts",
-      "../graph-ipfs/node_modules/libp2p/dist/src/pnet/index.d.ts",
-      "../graph-ipfs/node_modules/libp2p/dist/src/pnet/key-generator.d.ts",
       "../graph-ipfs/node_modules/libp2p/dist/src/record/envelope/index.d.ts",
       "../graph-ipfs/node_modules/libp2p/dist/src/registrar.d.ts",
       "../graph-ipfs/node_modules/libp2p/dist/src/transport-manager.d.ts",

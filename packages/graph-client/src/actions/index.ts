@@ -128,6 +128,7 @@ export class ActionFactory {
     }
 
     getFunction(func: string) {
+        console.log("Get function", func)
         return this.actions[func] || (() => {
             return {};
         })
