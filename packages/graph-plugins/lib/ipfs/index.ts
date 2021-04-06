@@ -5,6 +5,7 @@ import { WorkhubFS } from '@workerhive/ipfs'
 import { create } from 'lodash';
 import { ReadStream } from 'fs';
 import { getFields } from '../utils';
+import path from 'path';
 
 export const client = (models: any[], client: any, dispatch: any) => {
     let actions: any = {};
@@ -91,6 +92,7 @@ export const IPFS: Function = (fs: WorkhubFS) => {
                         }
                         return ls.map((x) => ({
                             ...x,
+                            path: args.path || '/',
                             type: x.type.toString(),
                             cid: x.cid.toString()
                         }));
@@ -137,16 +139,17 @@ export const IPFS: Function = (fs: WorkhubFS) => {
 
                                 try {
                                     if (args.path) {
-                                        console.log("Path supplied", `${args.path}/${filename}`)
+                                        console.log("Path supplied", path.join(args.path, filename))
                                         // await fs?.node?.files.rm(args.path) //cheeky hack to make sure write is clean
-                                        await fs?.node?.files.write(`${args.path}/${filename}`, buffer, { create: true, parents: true })
+                                        await fs?.node?.files.write(path.join(args.path, filename), buffer, { create: true, parents: true })
                                     }
                                 } catch (e) {
+                                    console.error("IPFS upload", e)
                                     reject(e)
                                 }
                                 //let result = await fs.node?.files.write('/test-2', buffer, {create: true})
 
-                                resolve({ filename: filename, cid: cid })
+                                resolve({ name: filename, path: args.path && args.path, cid: cid })
                             })
                         })
 
